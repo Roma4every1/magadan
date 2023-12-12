@@ -1,0 +1,20 @@
+.r-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 50px;
+}
+
+.r-main-title{
+    padding: 15px 0;
+    border-bottom: 1px solid #8c8c8c;
+    line-height: 5px;
+}
+.r-main-title h4{
+    font-size: 22px;
+}
+.r-main-title>p{
+    font-size: 18px;
+}
