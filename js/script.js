@@ -1,3 +1,5 @@
+
+
 // media header navbar
 
 const button = document.querySelector("nav .navigation")
@@ -78,3 +80,13 @@ signinMediaBtn.addEventListener('click', () => {
     formContainer.classList.add('media-passive');
     formContainer.classList.remove('media-active');
 });
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+

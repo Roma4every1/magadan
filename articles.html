@@ -146,6 +146,68 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+    <script>// Анимация для первого артикля (появление слева)
+        const article1 = gsap.timeline();
+        article1.from(".article:nth-child(1)", { x: -500, opacity: 1, duration: 0.2 });
+        
+        // Анимация для второго артикля (появление справа)
+        const article2 = gsap.timeline();
+        article2.from(".article:nth-child(2)", { x: 500, opacity: 1, duration: 1 });
+        
+        // Анимация для третьего артикля (появление слева)
+        const article3 = gsap.timeline();
+        article3.from(".article:nth-child(3)", { x: -500, opacity: 1, duration: 2 });
+        
+        // Анимация для четвертого артикля (появление справа)
+        const article4 = gsap.timeline();
+        article4.from(".article:nth-child(4)", { x: 500, opacity: 1, duration: 2.8});
+        
+        // Инициализация ScrollMagic и привязка анимаций к событию прокрутки
+        const controller = new ScrollMagic.Controller();
+        
+        new ScrollMagic.Scene({
+            triggerElement: ".articles",
+            triggerHook: 0.5,
+            reverse: false
+        })
+        .setTween(article1)
+        .addTo(controller);
+        
+        new ScrollMagic.Scene({
+            triggerElement: ".articles",
+            triggerHook: 0.5,
+            reverse: false
+        })
+        .setTween(article2)
+        .addTo(controller);
+        
+        new ScrollMagic.Scene({
+            triggerElement: ".articles",
+            triggerHook: 0.5,
+            reverse: false
+        })
+        .setTween(article3)
+        .addTo(controller);
+        
+        new ScrollMagic.Scene({
+            triggerElement: ".articles",
+            triggerHook: 0.5,
+            reverse: false
+        })
+        .setTween(article4)
+        .addTo(controller);
+           // Создаем сцену для блока "about-us-main"
+    var scene1 = new ScrollMagic.Scene({
+      triggerElement: '.main-articles',
+      triggerHook: 0.8,
+      reverse: false
+    })
+    .setTween(gsap.from('.main-articles', {y:100, opacity: 1, duration: 1 }))
+    .addTo(controller);</script>
 </body>
 
 </html>
