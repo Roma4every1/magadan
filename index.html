@@ -227,7 +227,7 @@
             triggerHook: 0.8,
             reverse: false
           })
-          .setTween(gsap.from('.courses', { y: 300, opacity: 0.3, duration: 2 }))
+          .setTween(gsap.from('.courses', { x: 1000, opacity: 0.3, duration: 2 }))
           .addTo(controller);
           
           // Создаем сцену для блока "search-container"
@@ -235,17 +235,26 @@
             triggerElement: '.search-container',
             triggerHook: 0.8,
             reverse: false
-          }) .setTween(gsap.from('.search-container', {y:300, opacity: 0.3, duration: 2 }))
+          }) .setTween(gsap.from('.search-container', {x:-2000, opacity: 0.3, duration: 2 }))
           .addTo(controller)
             // Создаем сцену для блока "search-container"
             var scene5 = new ScrollMagic.Scene({
             triggerElement: '.about-us-container',
             triggerHook: 0.8,
             reverse: false
-          }) .setTween(gsap.from('.about-us-container', { y: 300, opacity: 0.3, duration: 2 }))
+          }) .setTween(gsap.from('.about-us-container', { x: 1000, opacity: 0.3, duration: 2 }))
           .addTo(controller)
           
-          
+          document.querySelector('.search-form a').addEventListener('click', function(event) {
+  event.preventDefault(); // Предотвращаем отправку формы
+
+  var userInput = document.querySelector('.search-form input').value;
+  if (userInput.toLowerCase() === 'ux/ui') {
+    window.location.href = 'course.html';
+  } else {
+    window.location.href = '404.html';
+  }
+});
           </script>
              
 </body>

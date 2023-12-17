@@ -75,6 +75,7 @@ nav > div > img {
 h1{
     font-family: 'SOFIAPROSOFTBOLD' ;
     font-size: 35px;
+
 }
 a{
     text-decoration: none;
@@ -193,7 +194,6 @@ nav .btns {
 
 
 
-
 .main-p {
     font-family: '9Slide03SOFIAPROSOFTLIGHT' !important;
     font-size: 32px;
@@ -286,8 +286,10 @@ nav .btns {
 .card-text > p {
     text-indent: 12px;
     font-size: 19px;
-    text-align: justify;
+
 }
+  
+   
 
 .card-span{
     display: inline-block;

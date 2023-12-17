@@ -152,19 +152,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
     <script>// Анимация для первого артикля (появление слева)
         const article1 = gsap.timeline();
-        article1.from(".article:nth-child(1)", { x: -500, opacity: 1, duration: 0.2 });
+        article1.from(".article:nth-child(1)", { x: -1200, opacity: 1, duration: 1 });
         
         // Анимация для второго артикля (появление справа)
         const article2 = gsap.timeline();
-        article2.from(".article:nth-child(2)", { x: 500, opacity: 1, duration: 1 });
+        article2.from(".article:nth-child(2)", { x: 1200, opacity: 1, duration: 1 });
         
         // Анимация для третьего артикля (появление слева)
         const article3 = gsap.timeline();
-        article3.from(".article:nth-child(3)", { x: -500, opacity: 1, duration: 2 });
+        article3.from(".article:nth-child(3)", { x: -1200, opacity: 1, duration: 2 });
         
         // Анимация для четвертого артикля (появление справа)
         const article4 = gsap.timeline();
-        article4.from(".article:nth-child(4)", { x: 500, opacity: 1, duration: 2.8});
+        article4.from(".article:nth-child(4)", { x: 1200, opacity: 1, duration: 2});
         
         // Инициализация ScrollMagic и привязка анимаций к событию прокрутки
         const controller = new ScrollMagic.Controller();
